@@ -1,0 +1,16 @@
+[Unit]
+Description=Evalsera evalra backend :8100
+After=network-online.target docker.service evalsera-caller.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=@REPO_ROOT@/evalra_backend
+EnvironmentFile=-@REPO_ROOT@/evalra_backend/.env
+ExecStart=@REPO_ROOT@/evalra_backend/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8100
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target evalsera.target

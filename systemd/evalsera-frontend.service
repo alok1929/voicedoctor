@@ -1,0 +1,16 @@
+[Unit]
+Description=Evalsera Next.js frontend :3000
+After=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=@REPO_ROOT@/evals_frontend
+EnvironmentFile=-@REPO_ROOT@/evals_frontend/.env.local
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/npm run start -- -p 3000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target evalsera.target

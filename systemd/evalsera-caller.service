@@ -1,0 +1,16 @@
+[Unit]
+Description=Evalsera caller server (Vobiz / Pipecat) :7870
+After=network-online.target docker.service
+Wants=network-online.target docker.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=@REPO_ROOT@
+EnvironmentFile=-@REPO_ROOT@/.env
+ExecStart=@REPO_ROOT@/.venv/bin/python main.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target evalsera.target

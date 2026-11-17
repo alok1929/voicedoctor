@@ -1,0 +1,80 @@
+/* Voice Doctor design tokens — shared with app/landing/landing.module.css */
+
+:root {
+  /* Accent — single interactive color */
+  --accent: #3E7E72;
+  --accent-hover: #2B5E53;
+  --accent-tint: #EAF2EE;
+  --accent-tint-strong: rgba(62, 126, 114, 0.22);
+
+  /* Legacy aliases (migration) */
+  --primary: var(--accent);
+  --primary-hover: var(--accent-hover);
+
+  /* Semantic — not for selection states */
+  --danger: #9A4B3B;
+  --danger-tint: #FBF0EC;
+  --destructive: var(--danger);
+  --success: #2F8F5B;
+  --success-tint: rgba(47, 143, 91, 0.12);
+  --warning: #B8752E;
+  --warning-tint: rgba(184, 117, 46, 0.12);
+  --info: #2B6CB0;
+  --info-tint: rgba(43, 108, 176, 0.12);
+
+  /* Neutrals */
+  --bg: #F5F2EB;
+  --paper-tint: #EDE9DE;
+  --card: #FFFFFF;
+  --grouped-bg: #FFFFFF;
+  --fill-secondary: #FAF8F4;
+  --fill-tertiary: #EDE9DE;
+  --border: #E6E0D4;
+  --border-input: #D6D0C2;
+  --separator: #E2DDD0;
+  --text: #1B2B26;
+  --text-primary: #1B2B26;
+  --text-secondary: #556660;
+  --text-tertiary: #8A958F;
+  --muted: var(--text-secondary);
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Typography */
+  --text-heading-size: 1.0625rem;
+  --text-heading-weight: 600;
+  --text-body-size: 0.9375rem;
+  --text-body-weight: 400;
+  --text-caption-size: 0.8125rem;
+  --text-caption-weight: 400;
+  --text-label-size: 0.8125rem;
+  --text-label-weight: 500;
+
+  /* Controls */
+  --segmented-height: 32px;
+  --slider-track: 4px;
+  --icon-size: 18px;
+  --icon-stroke: 1.75;
+
+  /* Layout */
+  --sidebar-w: 220px;
+  --page-max-width: 1920px;
+  --page-padding: 32px;
+  --page-padding-lg: 48px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(27, 43, 38, 0.04), 0 4px 12px rgba(27, 43, 38, 0.04);
+  --shadow-md: 0 2px 4px rgba(27, 43, 38, 0.06), 0 16px 44px rgba(27, 43, 38, 0.1);
+}

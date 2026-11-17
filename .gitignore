@@ -1,0 +1,14 @@
+.env
+.cloudflare-tunnel-token
+.venv/
+reports/
+assets/.cache/
+assets/library/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+/recordings/
+tts_gcp.json
+venv/
+.venv

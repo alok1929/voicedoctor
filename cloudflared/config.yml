@@ -1,0 +1,21 @@
+tunnel: 810502bb-b49f-4cd9-9401-ef2c2423c04f
+credentials-file: /home/ubuntu/.cloudflared/810502bb-b49f-4cd9-9401-ef2c2423c04f.json
+
+ingress:
+  - hostname: voicedoctor.framewise.ai
+    service: http://localhost:3000
+  - hostname: evalsra-api.framewise.ai
+    path: ^/auth
+    service: http://localhost:8100
+  - hostname: evalsra-api.framewise.ai
+    path: ^/metrics
+    service: http://localhost:8100
+  - hostname: evalsra-api.framewise.ai
+    path: ^/reports
+    service: http://localhost:8100
+  - hostname: evalsra-api.framewise.ai
+    path: ^/pulses
+    service: http://localhost:8100
+  - hostname: evalsra-api.framewise.ai
+    service: http://localhost:7870
+  - service: http_status:404

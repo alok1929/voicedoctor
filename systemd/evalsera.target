@@ -1,0 +1,7 @@
+[Unit]
+Description=Evalsera application stack (caller + backend + frontend)
+After=network-online.target docker.service
+Wants=evalsera-caller.service evalsera-backend.service evalsera-frontend.service
+
+[Install]
+WantedBy=multi-user.target
